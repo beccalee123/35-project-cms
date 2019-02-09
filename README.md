@@ -7,8 +7,9 @@
 Paired on bug fixes and UMLs with Brent Woodward and Heather Cherewaty
 
 ### Links and Resources
+![Build Status](https://travis-ci.com/beccalee123/35-project-cms.svg?branch=master)
 * [repo](https://github.com/beccalee123/35-project-cms)
-* [travis](http://xyz.com)
+* [travis](https://travis-ci.com/beccalee123/35-project-cms/builds/100336397)
 * [front-end](http://xyz.com)
 
 ### Modules
