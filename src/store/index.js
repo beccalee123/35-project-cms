@@ -8,6 +8,10 @@ let reducers = combineReducers({
   records: APIreducer
 });
 
+/**
+ * Store
+ * Creates store
+ */
 const store = () =>
   createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
 

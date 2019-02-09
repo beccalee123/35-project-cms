@@ -4,6 +4,13 @@ import Record from './record.js';
 import Models from './models.js';
 import Records from './records.js';
 
+/**
+ * CMS class
+ * renders the models, records, and record components
+ * @export
+ * @class CMS
+ * @extends {React.Component}
+ */
 export default class CMS extends React.Component {
   render() {
     return (

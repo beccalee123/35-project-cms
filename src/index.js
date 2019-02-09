@@ -8,6 +8,11 @@ import CMS from './components/cms/cms.js';
 import createStore from './store/';
 const store = createStore();
 
+/**
+ * App function
+ * Renders the page with all provided components
+ * @returns a fully rendered page
+ */
 function App() {
   return (
     <Provider store={store}>
