@@ -13,13 +13,26 @@ const uiSchema = {
   __v: { "ui:widget": "hidden" }
 };
 
+/**
+ * Records class
+ * @class Record
+ * @extends {React.Component}
+ */
 class Record extends React.Component {
   constructor(props) {
     super(props);
     this.state = { schemas: {} };
   }
 
-  // Runs whenever props change (pre-render)
+  /**
+   * getDerivedStateFromProps
+   * method that runs whenever props change (pre-render)
+   * @static
+   * @param {*} props
+   * @param {*} state
+   * @returns
+   * @memberof Record
+   */
   static getDerivedStateFromProps(props, state) {
     if (props.model && !props.schemas[props.model]) {
       let url = `${API}/${props.model}/schema`;
@@ -28,10 +41,20 @@ class Record extends React.Component {
     return {};
   }
 
+  /**
+   * handleError
+   * error handler method
+   * @memberof Record
+   */
   handleError = error => {
     console.error(error);
   };
 
+  /**
+   * handleSubmit
+   * Method that handles puts and posts to update records
+   * @memberof Record
+   */
   handleSubmit = form => {
     if (form.formData._id) {
       let url = `${API}/${this.props.model}/${form.formData._id}`;
@@ -42,6 +65,12 @@ class Record extends React.Component {
     }
   };
 
+  /**
+   * render
+   * renders Form when condition is met
+   * @returns
+   * @memberof Record
+   */
   render() {
     return (
       <When condition={this.props.schemas[this.props.model]}>
@@ -58,12 +87,23 @@ class Record extends React.Component {
   }
 }
 
+/**
+ * mapStateToProps
+ * maps record, schemas, and model states to props
+ * @param {*} state
+ */
 const mapStateToProps = state => ({
-  record: state.records.record, // changed from state.api.record
-  schemas: state.records.schemas, // changed from state.api.schemas
+  record: state.records.record,
+  schemas: state.records.schemas,
   model: state.records.model
 });
 
+/**
+ * mapDispatchToProps
+ * includes getRecord, getSchema, post, and put
+ * @param {*} dispatch
+ * @param {*} getState
+ */
 const mapDispatchToProps = (dispatch, getState) => ({
   getRecord: url => dispatch(actions.getRecord(url)),
   getSchema: (model, url) => dispatch(actions.getSchema(model, url)),

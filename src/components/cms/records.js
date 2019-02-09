@@ -16,17 +16,38 @@ const styles = {
 
 const API = process.env.REACT_APP_API;
 
+/**
+ * Records class
+ * @class Records
+ * @extends {React.Component}
+ */
 class Records extends React.Component {
+  /**
+   * getRecord
+   * gets a record
+   * @memberof Records
+   */
   getRecord = id => {
     let url = `${API}/${this.props.model}/${id}`;
     this.props.getRecord(url);
   };
 
+  /**
+   * deleteRecord
+   * deletes a record
+   * @memberof Records
+   */
   deleteRecord = id => {
     let url = `${API}/${this.props.model}/${id}`;
     this.props.deleteRecord(this.props.model, id, url);
   };
 
+  /**
+   * render
+   * renders specific records when the condition has been met
+   * @returns
+   * @memberof Records
+   */
   render() {
     return (
       <When condition={this.props.model}>
@@ -54,11 +75,22 @@ class Records extends React.Component {
   }
 }
 
+/**
+ * mapStateToProps
+ * maps records and model states to props
+ * @param {*} state
+ */
 const mapStateToProps = state => ({
   records: state.records.records,
   model: state.records.model
 });
 
+/**
+ * mapDispatchToProps
+ * includes getRecord, deleteRecord, and clearRecord
+ * @param {*} dispatch
+ * @param {*} getState
+ */
 const mapDispatchToProps = (dispatch, getState) => ({
   getRecord: url => dispatch(actions.getRecord(url)),
   deleteRecord: (model, id, url) => dispatch(actions.destroy(model, id, url)),
