@@ -14,7 +14,7 @@ const styles = {
   }
 };
 
-const API = process.env.REACT_APP_APII;
+const API = process.env.REACT_APP_API;
 
 class Records extends React.Component {
   getRecord = id => {
@@ -55,8 +55,8 @@ class Records extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  records: state.records.records, // changed from state.api.records
-  model: state.records.model // changed from state.api.model
+  records: state.records.records,
+  model: state.records.model
 });
 
 const mapDispatchToProps = (dispatch, getState) => ({
