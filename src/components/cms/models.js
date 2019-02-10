@@ -50,7 +50,7 @@ class Models extends React.Component {
    */
   render() {
     return (
-      <ul>
+      <ul className ="models">
         {this.props.models &&
           this.props.models.map((model, i) => (
             <li
