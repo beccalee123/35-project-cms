@@ -51,16 +51,16 @@ class Records extends React.Component {
   render() {
     return (
       <When condition={this.props.model}>
-        <ul>
+        <ul className="records">
           {this.props.records.map((record, i) => (
             <li key={record._id}>
-              <span
+              <span className="record"
                 style={styles.clickable}
                 onClick={() => this.getRecord(record._id)}
               >
                 {record.name}
               </span>
-              <span
+              <span className="x"
                 style={styles.delete}
                 onClick={() => this.deleteRecord(record._id)}
               >

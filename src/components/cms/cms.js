@@ -16,6 +16,7 @@ export default class CMS extends React.Component {
     return (
       <>
         <header>
+          <h1>Code Fellows CMS</h1>
           <nav>
             <Models />
           </nav>

@@ -36,6 +36,8 @@ Paired on bug fixes and UMLs with Brent Woodward and Heather Cherewaty
 * What assertions were made?
 * What assertions need to be / should be made?
 
+Testing is currently TBD. I ran into issues mounting components on this one.
+
 #### UML
 UML
 ![UML](lab_35_uml.jpg)
