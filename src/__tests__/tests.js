@@ -13,3 +13,22 @@ describe('testing check', () => {
     expect(true).toBeTruthy();
   });
 });
+
+describe('content', () => {
+  it('renders an h1 on pageload', () => {
+    let component = shallow(<CMS/>);
+    expect(component.find("h1").exists()).toBeTruthy();
+  });
+
+  // it('contains li elements that can render records', () => {
+  //   let component = mount(
+  //     <Provider store={store}>
+  //       <CMS />
+  //     </Provider>
+  //   );
+  //   let li = component.find("li");
+  //   li.simulate("click");
+  //   expect(component.find(".records").exists()).toBeTruthy();
+  // });
+
+});
