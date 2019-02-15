@@ -10,7 +10,7 @@ Paired on bug fixes and UMLs with Brent Woodward and Heather Cherewaty
 ![Build Status](https://travis-ci.com/beccalee123/35-project-cms.svg?branch=master)
 * [repo](https://github.com/beccalee123/35-project-cms)
 * [travis](https://travis-ci.com/beccalee123/35-project-cms/builds/100336397)
-* [front-end](d1paxg74gu0vz5.cloudfront.net)
+* [front-end](https://d1paxg74gu0vz5.cloudfront.net/)
 
 ### Modules
 - `index.js` renders the main app
